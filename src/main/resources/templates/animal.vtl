@@ -1,0 +1,30 @@
+<h2>$animal.getName()</h2>
+
+<p>Age of spotted Animal: $animal.getAge()</p>
+
+<ul>
+  #foreach($sighting in $animal.getSightings())
+    <li><a href="/sightings/$sighting.getId()">$sighting.getLocation()</a><li>
+  #end
+</ul>
+
+<h2>Edit this Animal:</h2>
+
+<form action="/animals/$animal.getId()/update" method="post">
+  <label for="animal-name">Species Update:</label>
+  <input id="animal-name" name="animal-name" type="text" required>
+  <br>
+  <label for="animal-age">Add Animal's Age:</label>
+  <select id='animal-age' name='animal-age' type='text' required>
+    <option value=Newborn>Newborn</option>
+    <option value=Young>Young</option>
+    <option value=Adult>Adult</option>
+  </select>
+  <button type="submit" class="btn btn-danger">Update Animal</button>
+</form>
+
+<h2>Delete This Animal:</h2>
+
+<form action="/animals/$animal.getId()/delete" method="post">
+  <button type="submit" class="btn btn-danger" id="delete-animal">Delete Animal</button>
+</form>

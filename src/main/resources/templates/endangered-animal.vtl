@@ -1,0 +1,41 @@
+<h2>$endangered-animal.getName()</h2>
+
+
+<p>Health of spotted Animal: $endangered-animal.getHealth()</p>
+<p>Age of spotted Animal: $endangered-animal.getAge()</p>
+<p>Amount of spotted Animal: $endangered-animal.getAmount()</p>
+
+
+<ul>
+  #foreach($sighting in $endangered-animal.getSightings())
+    <li><a href="/sightings/$sighting.getId()">$sighting.getLocation()</a><li>
+  #end
+</ul>
+
+<h2>Edit this Endangered Animal:</h2>
+
+<form action="/endangered-animals/$endangered-animal.getId()/update" method="post">
+  <label for="endangered-animal-name">Species Update:</label>
+  <input id="endangered-animal-name" name="endangered-animal-name" type="text" required>
+  <br>
+  <label for="health">Update Health:</label>
+  <select id='health' name='health' type='text' required>
+    <option value=Ill>Ill</option>
+    <option value=Okay>Okay</option>
+    <option value=Well>Well</option>
+  </select>
+  <br>
+  <label for="animal-age">Add Animal's Age:</label>
+  <select id='animal-age' name='animal-age' type='text' required>
+    <option value=Newborn>Newborn</option>
+    <option value=Young>Young</option>
+    <option value=Adult>Adult</option>
+  </select>
+  <button type="submit" class="btn btn-danger">Update Animal</button>
+</form>
+
+<h2>Delete This Animal:</h2>
+
+<form action="/endangered-animals/$endangered-animal.getId()/delete" method="post">
+  <button type="submit" class="btn btn-danger" id="delete-endangered-animal">Delete Animal</button>
+</form>
