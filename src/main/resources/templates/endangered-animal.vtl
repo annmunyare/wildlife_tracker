@@ -15,21 +15,21 @@
 <h2>Edit this Endangered Animal:</h2>
 
 <form action="/endangered-animals/$endangered-animal.getId()/update" method="post">
-  <label for="endangered-animal-name">Species Update:</label>
+  <label for="endangered-animal-name">Name Update:</label>
   <input id="endangered-animal-name" name="endangered-animal-name" type="text" required>
   <br>
   <label for="health">Update Health:</label>
   <select id='health' name='health' type='text' required>
-    <option value=Ill>Ill</option>
-    <option value=Okay>Okay</option>
-    <option value=Well>Well</option>
+    <option value=Ill>Sick</option>
+    <option value=Okay>Fine</option>
+    <option value=Well>Lively</option>
   </select>
   <br>
   <label for="animal-age">Add Animal's Age:</label>
   <select id='animal-age' name='animal-age' type='text' required>
-    <option value=Newborn>Newborn</option>
-    <option value=Young>Young</option>
-    <option value=Adult>Adult</option>
+    <option value=Newborn>Young</option>
+    <option value=Young>Middle Age</option>
+    <option value=Adult>Old Age</option>
   </select>
   <button type="submit" class="btn btn-danger">Update Animal</button>
 </form>

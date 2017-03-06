@@ -28,17 +28,6 @@ public class EndangeredAnimals extends GeneralAnimal implements DatabaseManageme
     return amount;
   }
 
-  // public void setHealth() {
-  //   this.health = health;
-  // }
-  //
-  // public void setAge() {
-  //   this.age = age;
-  // }
-  //
-  // public void setAmount() {
-  //   this.amount = amount;
-  // }
 
   public static List<EndangeredAnimals> all() {
     String sql = "SELECT * FROM general_animals WHERE type = 'endangered';";

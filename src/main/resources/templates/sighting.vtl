@@ -1,0 +1,31 @@
+<h2>Sightings for: $sighting.getLocation()</h2>
+
+<p>Ranger: $sighting.getRangerName()</p>
+<p>Time: $sighting.getSpotted()</p>
+
+
+<h4>Animals:</h4>
+<ul>
+  #foreach($animal in $sighting.getAnimals())
+    <li><a href="/animals/$animal.getId()">$animal.getName()</a><li>
+  #end
+</ul>
+
+
+
+<h2>Edit this Sighting:</h2>
+
+<form action="/sightings/$sighting.getId()/update" method="post">
+  <label for="location">Location Update:</label>
+  <input id="location" name="location" type="text">
+  <br>
+  <label for="ranger-name">Ranger Name Update:</label>
+  <input id="ranger-name" name="ranger-name" type="text">
+  <button type="submit" class="btn btn-danger">Update Sighting</button>
+</form>
+
+<h2>Delete This Sighting:</h2>
+
+<form action="/sightings/$sighting.getId()/delete" method="post">
+  <button type="submit" class="btn btn-danger" id="delete-sighting">Delete Sighting</button>
+</form>

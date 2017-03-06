@@ -1,4 +1,43 @@
 body {
-    /*background-image: url("/images/2.jpg");*/
-    background-position: cover;
+    background-image: url("/images/7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Waiting for the Sunrise', cursive;
+    color: green;
 }
+
+#body {
+    font size: 3em;
+    /*display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;*/
+}
+
+#endangered {
+    /*flex: 1;*/
+    margin-left: 505px;
+    color: red;
+    font-weight: bolder;
+}
+
+#sightings {
+    color: blue;
+}
+
+#common {
+    /*flex: 1;*/
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 500px;
+}
+
+h1 {
+    color: black;
+}
+
+
+/*#sightings {
+    flex: 1;
+}*/
